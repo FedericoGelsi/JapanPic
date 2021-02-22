@@ -7,6 +7,11 @@
         <link rel="icon" href="VENDOR/IMG/logo.svg">
         <script type="text/javascript" src="JS/index.js"></script>
         <title>JapanPic</title>
+        (function(sa,fbc){function load(f,c){var a=document.createElement('script');
+        a.async=1;a.src=f;var s=document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(a,s);}load(sa);
+        window.addEventListener('load',function(){firebase.initializeApp(fbc).performance()});
+        })(performance_standalone, firebaseConfig);
     </head>
     <body>
         <!--Website header-->
@@ -78,5 +83,23 @@
 
         <!-- Initialize Firebase -->
         <script src="/__/firebase/init.js"></script>
+         <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js"></script>
+
+        <!-- Add the standard Performance Monitoring library -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-performance.js"></script>
+
+        <script>
+            // TODO: Replace the following with your app's Firebase project configuration
+            var firebaseConfig = {
+              // ...
+            };
+          
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+          
+            // Initialize Performance Monitoring and get a reference to the service
+            var perf = firebase.performance();
+        </script>
     </body>
  </html>
